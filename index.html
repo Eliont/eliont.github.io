@@ -1,120 +1,67 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640">
+<!-- Recent Posts by Label Start -->
+<!-- code by BloggerSentral.com -->
+<script type="text/javascript">
+function recentpostslist(json) {
+ document.write('<ul>');
+ for (var i = 0; i < json.feed.entry.length; i++)
+ {
+    for (var j = 0; j < json.feed.entry[i].link.length; j++) {
+      if (json.feed.entry[i].link[j].rel == 'alternate') {
+        break;
+      }
+    }
+var entryUrl = "'" + json.feed.entry[i].link[j].href + "'";//bs
+var entryTitle = json.feed.entry[i].title.$t;
+var item = "<li>" + "<a href="+ entryUrl + '" target="_blank">' + entryTitle + "</a> </li>";
+ document.write(item);
+ }
+ document.write('</ul>');
+ }
+</script>
 
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
-    <title>Eliont.GitHub.io by Eliont</title>
-  </head>
-
-  <body>
-    <a id="forkme_banner" href="https://github.com/Eliont">View on GitHub</a>
-    <div class="shell">
-
-      <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <h1>Eliont.GitHub.io</h1>
-            <h2></h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-      </header>
-
-      <div id="no-downloads">
-        <span class="inner">
-        </span>
-      </div>
-
-
-      <span class="banner-fix"></span>
-
-
-      <section id="main_content">
-        <p>&lt;!DOCTYPE html&gt;
-</p>
-
-
-
-
-
-
-
-
+<style>
 body{
 background-color: #dddddd; /* Цвет фона веб-страницы */
 } 
+</style>
 
-
-<p></p>
+<body>
 
 <table cellspacing="20">
 
-<td>Millennium War Aigis<br>
-
+<td>Millennium War Aigis<br />
+<script src="http://hentai-games-records.blogspot.ru/feeds/posts/summary/-/MillenniumWarAigis?max-results=500&alt=json-in-script&callback=recentpostslist"></script>
 </td>
 
-<td>Dragon Providence<br>
-
+<td>Dragon Providence<br />
+<script src="http://hentai-games-records.blogspot.ru/feeds/posts/summary/-/DragonProvidence?max-results=500&alt=json-in-script&callback=recentpostslist"></script>
 </td>
 
 
-<td>Girls Kingdom<br>
+<td>Girls Kingdom<br />
+<script src="http://hentai-games-records.blogspot.ru/feeds/posts/summary/-/GirlsKingdom?max-results=500&alt=json-in-script&callback=recentpostslist"></script>
 
 
-
-<br>Duel Squad<br>
-
-
-
-<br>Dragon Tactics: Memories<br>
+<br />Duel Squad<br />
+<script src="http://hentai-games-records.blogspot.ru/feeds/posts/summary/-/DuelSquad?max-results=500&alt=json-in-script&callback=recentpostslist"></script>
 
 
+<br />Dragon Tactics: Memories<br />
+<script src="http://hentai-games-records.blogspot.ru/feeds/posts/summary/-/DragonTactics?max-results=500&alt=json-in-script&callback=recentpostslist"></script>
 
-<br>Other<br>
 
+<br />Other<br />
+<script src="http://hentai-games-records.blogspot.ru/feeds/posts/summary/-/Other?max-results=500&alt=json-in-script&callback=recentpostslist"></script>
 </td>
 
-<br>
-Get this <a href="http://www.bloggersentral.com/2010/04/list-recent-posts-by-label.html">widget</a>
+<br />
+<span style="float: right; font-size: 80%;">Get this <a href="http://www.bloggersentral.com/2010/04/list-recent-posts-by-label.html">widget</a></span>
+<!-- Recent Posts by Label End -->
 
 
-
-
+<!-- Recent Posts by Label End -->
 </table>
-
-<p>
-</p>
-      </section>
-
-      <footer>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <p>Projects by <a href="https://github.com/Eliont">Eliont</a> can be found on <a href="https://github.com/Eliont">GitHub</a></p>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
-        <span class="octocat"></span>
-      </footer>
-
-    </div>
-
-    
-  </body>
+</body>
 </html>
