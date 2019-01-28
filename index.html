@@ -21,10 +21,11 @@ $.ajax({ url: 'eliont.github.io', success: function(data) {
   
 var parser = new DOMParser();
 var htmlDoc = parser.parseFromString(data, 'text/html');
-  alert(htmlDoc.getElementsByTagName('a'));
+  //alert(htmlDoc.getElementsByTagName('a'));
 // do whatever you want with htmlDoc.getElementsByTagName('a');
+
 $('a').each(function () {
-    console.log($(this).textContent);
+    alert($(this).textContent);
 });
 } });
     
