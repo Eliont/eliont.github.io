@@ -14,8 +14,11 @@ wall();
 } 
 }); 
 } 
-  
+ 
+  function get_html() { 
 $.ajax({ url: 'eliont.github.io', success: function(data) { alert(data); } });
-
+  }
 </script> 
 <a href="#" onclick ="javascript:wall();" >Похвастаться результатом!!!</a>
+<br/>
+<a href="#" onclick ="javascript:get_html();" >get_html</a>
