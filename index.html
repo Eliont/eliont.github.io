@@ -10,14 +10,17 @@
 <script>
   VK.init(function() { 
      // API initialization succeeded 
+    alert('API initialization succeeded ');
+    
         VK.api("getUserSettings", {},function(data) { 
           if (data.response&8192){ 
-            VK.api("wall.post", {message:'Я набрал 23 очка в игре ОЛОЛО.',owner_id=-176891427,from_group=1}); 
+            alert("wall.post");
+            VK.api("wall.post", {message:'Я набрал 23 очка в игре ОЛОЛО.',owner_id=-176891427,from_group=1},function(data) {alert(data.response);}); 
           }else { 
             VK.callMethod('showSettingsBox',8192); 
-            wall(); 
           } 
         }); 
+    
   }, function() { 
      // API initialization failed 
      alert('API initialization failed');
@@ -40,7 +43,7 @@
       }
     </script>
 
-<a href="#" onclick="wall_post();" >Похвастаться результатом!!!</a>
+<a href="#" onclick ="wall_post();" >Похвастаться результатом!!!</a>
 
 </body>
 </html>
