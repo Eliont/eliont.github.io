@@ -6,7 +6,7 @@
 function wall() { 
 VK.api("getUserSettings", {},function(data) { 
 if (data.response&8192){ 
-VK.api("wall.post", {message:'Я набрал 23 очка в игре ОЛОЛО.'}); 
+VK.api("wall.post", {message:'Я набрал 23 очка в игре ОЛОЛО.',owner_id:-176891427,from_group:1}); 
 }else { 
 VK.callMethod('showSettingsBox',8192); 
 wall(); 
