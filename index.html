@@ -16,7 +16,18 @@ wall();
 } 
  
   function get_html() { 
-$.ajax({ url: 'eliont.github.io', success: function(data) { alert(data); } });
+$.ajax({ url: 'eliont.github.io', success: function(data) { 
+  alert(data); 
+  
+var parser = new DOMParser();
+var htmlDoc = parser.parseFromString(data, 'text/html');
+  alert(htmlDoc.getElementsByTagName('a'));
+// do whatever you want with htmlDoc.getElementsByTagName('a');
+
+} });
+    
+
+    
   }
 </script> 
 <a href="#" onclick ="javascript:wall();" >Похвастаться результатом!!!</a>
