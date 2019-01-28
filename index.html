@@ -2,19 +2,7 @@
 <html>
   <head>
     <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
-    <script type="text/javascript"> 
-      function wall_post() 
-      { 
-        VK.api("getUserSettings", {},function(data) { 
-          if (data.response&8192){ 
-            VK.api("wall.post", {message:'Я набрал 23 очка в игре ОЛОЛО.',owner_id=-176891427,from_group=1}); 
-          }else { 
-            VK.callMethod('showSettingsBox',8192); 
-            wall(); 
-          } 
-        }); 
-      }
-    </script>
+
   </head>
   
   
@@ -28,11 +16,24 @@
      alert('API initialization failed');
 }, '5.92'); 
 </script>
-  
 
-  
 <body>
-<a href="#" onclick ="javascript:wall_post();" >Похвастаться результатом!!!</a>
+
+    <script type="text/javascript"> 
+      function wall_post() 
+      { 
+        VK.api("getUserSettings", {},function(data) { 
+          if (data.response&8192){ 
+            VK.api("wall.post", {message:'Я набрал 23 очка в игре ОЛОЛО.',owner_id=-176891427,from_group=1}); 
+          }else { 
+            VK.callMethod('showSettingsBox',8192); 
+            wall(); 
+          } 
+        }); 
+      }
+    </script>
+
+<a href="#" onclick ="wall_post();" >Похвастаться результатом!!!</a>
 
 </body>
 </html>
