@@ -24,9 +24,12 @@ var htmlDoc = parser.parseFromString(data, 'text/html');
   //alert(htmlDoc.getElementsByTagName('a'));
 // do whatever you want with htmlDoc.getElementsByTagName('a');
 
-htmlDoc.getElementsByTagName('a').forEach(function (item, i, arr) {
-    alert(item.textContent);
-});
+var list = htmlDoc.getElementsByTagName('a');
+  
+    for (var i = 0; i < list.length; i++) {
+        alert(list[i].textContent);
+    }
+  
 } });
     
 
