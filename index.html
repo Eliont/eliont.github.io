@@ -23,7 +23,9 @@ var parser = new DOMParser();
 var htmlDoc = parser.parseFromString(data, 'text/html');
   alert(htmlDoc.getElementsByTagName('a'));
 // do whatever you want with htmlDoc.getElementsByTagName('a');
-
+$('a').each(function () {
+    console.log($(this).textContent);
+});
 } });
     
 
