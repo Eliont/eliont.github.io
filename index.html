@@ -24,8 +24,8 @@ var htmlDoc = parser.parseFromString(data, 'text/html');
   //alert(htmlDoc.getElementsByTagName('a'));
 // do whatever you want with htmlDoc.getElementsByTagName('a');
 
-$('a').each(function () {
-    alert($(this).textContent);
+htmlDoc.getElementsByTagName('a').forEach(function (item, i, arr) {
+    alert(item.textContent);
 });
 } });
     
