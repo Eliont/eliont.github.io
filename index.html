@@ -8,14 +8,27 @@
   VK.init(function() { 
      // API initialization succeeded 
     alert('API initialization succeeded ');
-    
-    VK.callMethod("showSettingsBox", 8192);
+    wall();
+    }); 
     
   }, function() { 
      // API initialization failed 
      alert('API initialization failed');
 }, '5.92'); 
 </script>
+  
+<script> 
+  function wall() { 
+    VK.api("getUserSettings", {},function(data) { 
+      if (data.response&8192){ 
+        VK.api("wall.post", {message:'Я набрал 23 очка в игре ОЛОЛО.',owner_id=-176891427,from_group=1}); 
+      }else { 
+        VK.callMethod('showSettingsBox',8192); 
+        wall(); 
+      } 
+    }); 
+  } 
+</script> 
   
 <body>
 <h1>Hello World</h1>
