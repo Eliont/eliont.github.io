@@ -8,6 +8,9 @@
   VK.init(function() { 
      // API initialization succeeded 
     alert('API initialization succeeded ');
+    
+    VK.callMethod("showSettingsBox", 8192);
+    
   }, function() { 
      // API initialization failed 
      alert('API initialization failed');
