@@ -4,18 +4,6 @@
     <script src="https://vk.com/js/api/xd_connection.js?2"  type="text/javascript"></script>
   </head>
   
-<script type="text/javascript"> 
-  VK.init(function() { 
-     // API initialization succeeded 
-    alert('API initialization succeeded ');
-    wall();
-
-  }, function() { 
-     // API initialization failed 
-     alert('API initialization failed');
-}, '5.92'); 
-</script>
-  
 <script> 
   function wall() { 
     VK.api("getUserSettings", {},function(data) { 
@@ -28,6 +16,20 @@
     }); 
   } 
 </script> 
+  
+<script type="text/javascript"> 
+  VK.init(function() { 
+     // API initialization succeeded 
+    alert('API initialization succeeded ');
+    wall();
+
+  }, function() { 
+     // API initialization failed 
+     alert('API initialization failed');
+}, '5.92'); 
+</script>
+  
+
   
 <body>
 <h1>Hello World</h1>
